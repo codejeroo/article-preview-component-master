@@ -178,6 +178,7 @@ body {
 
 .share-icon {
     filter: invert(100%) brightness(1000%);
+    z-index: 1;
 }
 
 .pop-up-left {
@@ -209,7 +210,7 @@ button:hover {
     .card-container {
         position: relative;
         flex-direction: row;
-        max-width: 650px;
+        max-width: 608px;
         gap: 32px;
     }
 
@@ -223,7 +224,7 @@ button:hover {
         margin-top: 0px;
         height: 65px;
         width: 247px;
-        right: -11%;
+        right: -11.5%;
         bottom: 31%;
     }
 
