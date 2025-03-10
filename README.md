@@ -29,8 +29,8 @@ s
 
 ### Links
 
-- Solution URL:[https://github.com/codejeroo/meet-landing-page]
-- Live Site URL:[https://codejeroo.github.io/meet-landing-page/]
+- Solution URL:[https://github.com/codejeroo/article-preview-component-master]
+- Live Site URL:[https://codejeroo.github.io/article-preview-component-master/]
 
 
 ### Built with
