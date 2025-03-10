@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --cs-white: #fff;
+    --cs-grey-900:#48556A;
+    --cs-grey-500: #6E8098;
+    --cs-grey-400: #9DAEC2;
+    --cs-grey-200: #ECF2F8;
+}
+
+/* Typography */
+.text-preset-1 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 130%;
+    letter-spacing: 0.25px;
+    color: var(--cs-grey-900);
+}
+
+.text-preset-2-bold {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: .8125rem;
+    line-height: 140%;
+    letter-spacing: 0.12%;
+    color: var(--cs-grey-900);
+}
+
+.text-preset-2-medium {
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: .8125rem;
+    line-height: 140%;
+    letter-spacing: 0.12%;
+    color: var(--cs-grey-500);
+}
+
+.text-preset-3 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 25%;
+    color: var(--cs-grey-500);
+}
+
+/* General Styling */
+
+body {
+    display: grid;
+    place-items: center;
+    background-color: var(--cs-grey-200);
+    min-height: 100vh;
+}
+
+.card-container {
+    min-width: 327px;
+    display: flex;
+    flex-direction: column;
+    border-radius: .75em;
+    background-color: var(--cs-white);
+    box-shadow: 40px 30px 20px rgba(17, 17, 26, 0.1);
+}
+
+.header-image > img {
+    height: auto;
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-bottom: 2em;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding: 0 1.875em 1.125em 1.875em;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.card-footer {
+    display: flex;
+    gap: 4em;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.author-container {
+    display: flex;
+    gap: 1em;
+   
+}
+
+.author-pic {
+    border-radius: 50%;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-posted {
+    color: var(--cs-grey-400);
+}
+
+.share-button > img{
+    height: auto;
+    width: 100%;
+    z-index: 1;
+
+}
+
+.share-button {
+    padding: 9px;
+    z-index: -1;
+    border: none;
+    background-color: var(--cs-grey-200);
+    height: 2.5em;
+    width: 2.5em;
+    margin-top: 4px;
+    border-radius: 50%;
+    margin-bottom: 4px;
+    z-index: 1;
+}
+
+
+
+
+.share-popup {
+    display: flex;
+    background-color: var(--cs-grey-900);
+    align-items: center;
+    padding: 22px 30px;
+    justify-content: space-between;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+
+/* Toggle Classes */
+.share-popup.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-footer.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+
+
+
+.bt-popup {
+    background-color: var(--cs-grey-500);
+}
+
+.share-icon {
+    filter: invert(100%) brightness(1000%);
+}
+
+.pop-up-left {
+    display: flex;
+    gap: 1.5em;
+}
+
+.pop-up-text {
+    color: var(--cs-grey-400);
+    letter-spacing: 3px;
+}
+
+
+
+button:hover {
+    cursor: pointer;
+}
+
+
+@media (min-width: 375px) {
+    .share-popup {
+    margin-top: -99.4px;
+    }
+}
+
+
+@media(min-width: 768px) {
+
+    .card-container {
+        flex-direction: row;
+        max-width: 608px;
+    }
+
+    
+.header-image > img {
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.post-container {
+    padding: 41px 36px 41px 0;
+}
+
+}
+
+@media (min-width: 1000px) {
+    .card-container {
+        max-width: 730px;
+        gap: 32px;
+    }
+}
