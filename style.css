@@ -100,7 +100,6 @@ body {
     margin-bottom: 18px;
     opacity: 1;
     visibility: visible;
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
 .author-container {
@@ -153,9 +152,8 @@ body {
     justify-content: space-between;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    opacity: 0;
+    opacity: 1;
     visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
 
@@ -209,9 +207,41 @@ button:hover {
 @media(min-width: 768px) {
 
     .card-container {
+        position: relative;
         flex-direction: row;
-        max-width: 608px;
+        max-width: 650px;
+        gap: 32px;
     }
+
+    .bt-popup {
+        display: none;
+    }
+
+    .share-popup {
+        border-radius: 12px;
+        position: absolute;
+        margin-top: 0px;
+        height: 65px;
+        width: 247px;
+        right: -11%;
+        bottom: 31%;
+    }
+
+    .share-popup::after {
+        content: "";
+        position: absolute;
+        bottom: -23px; /* Position below the box */
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 12px;
+        border-style: solid;
+        border-color: var(--cs-grey-900) transparent transparent transparent; /* Triangle pointing up */
+    }
+
+.card-footer.hidden {
+    visibility: visible;
+    opacity: 1;
+}
 
     
 .header-image > img {
@@ -223,7 +253,7 @@ button:hover {
 }
 
 .post-container {
-    padding: 41px 36px 41px 0;
+    padding: 41px 36px 20px 0;
 }
 
 }
@@ -233,4 +263,10 @@ button:hover {
         max-width: 730px;
         gap: 32px;
     }
+
+    .share-popup {
+        right: -10%;
+        bottom: 31%;
+    }
+
 }
